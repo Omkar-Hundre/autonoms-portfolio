@@ -53,6 +53,63 @@
     </script>
   </head>
   <body>
+    <!-- Initial Native Loader (Runs instantly before JS) -->
+    <style>
+      #native-loader {
+        position: fixed;
+        inset: 0;
+        z-index: 99999;
+        background: #FAFAF8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 24px;
+        transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.8s;
+      }
+      #native-loader.done {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+      .nl-track {
+        width: 120px;
+        height: 2px;
+        background: #E5E2DC;
+        border-radius: 2px;
+        overflow: hidden;
+      }
+      .nl-fill {
+        height: 100%;
+        background: #1A1A1A;
+        width: 0%;
+        border-radius: 2px;
+        animation: nl-fill-anim 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      @keyframes nl-fill-anim {
+        to { width: 100%; }
+      }
+      .nl-word {
+        font-family: "Space Grotesk", system-ui, sans-serif;
+        font-size: 14px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: #1A1A1A;
+        opacity: 0;
+        animation: nl-word-anim 0.5s 0.2s forwards;
+      }
+      @keyframes nl-word-anim {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    </style>
+    <div id="native-loader">
+      <span class="nl-word">Autonoms</span>
+      <div class="nl-track">
+        <div class="nl-fill"></div>
+      </div>
+    </div>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

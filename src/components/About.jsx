@@ -13,7 +13,7 @@ export default function About() {
         <div className="grid md:grid-cols-[1fr_1.2fr] gap-16 items-start">
           {/* Left */}
           <div className="reveal">
-            <span className="font-mono text-xs tracking-[0.15em] uppercase text-stone">
+            <span className="font-mono text-xs tracking-[0.15em] uppercase text-accent">
               Who we are
             </span>
             <h2 className="font-display font-bold text-3xl md:text-4xl text-text-primary mt-3 leading-tight">
@@ -54,7 +54,7 @@ export default function About() {
               { num: "100%", text: "Projects delivered to production — zero shelved" },
             ].map((p) => (
               <div key={p.text}>
-                <span className="font-display font-bold text-lg text-text-primary block mb-1">
+                <span className="font-display font-bold text-lg text-accent block mb-1">
                   {p.num}
                 </span>
                 <span className="font-body text-xs text-text-secondary leading-relaxed">

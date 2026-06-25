@@ -75,7 +75,7 @@ export default function Numbers() {
           <div className="reveal-stagger grid grid-cols-2 lg:grid-cols-4 gap-8">
             {NUMBERS.map((n) => (
               <div key={n.label} className="reveal">
-                <span className="font-display font-bold text-3xl md:text-4xl text-text-inverse block mb-1">
+                <span className="font-display font-bold text-3xl md:text-4xl text-accent block mb-1">
                   {n.value}
                 </span>
                 <span className="font-body text-sm text-text-inverse/70 leading-snug">
@@ -88,7 +88,7 @@ export default function Numbers() {
 
         {/* Clients */}
         <div className="reveal pt-12 border-t border-white/10">
-          <span className="font-mono text-xs tracking-[0.15em] uppercase text-stone-light">
+          <span className="font-mono text-xs tracking-[0.15em] uppercase text-accent">
             People we've built for
           </span>
           <h3 className="font-display font-semibold text-xl text-text-inverse mt-3 mb-8">

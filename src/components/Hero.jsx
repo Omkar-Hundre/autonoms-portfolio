@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section
       ref={ref}
-      className="relative min-h-[100svh] flex items-center px-6 pt-16 overflow-hidden"
+      className="relative min-h-[100svh] flex flex-col justify-center overflow-hidden"
     >
       {/* Design elements */}
       <div className="deco-grid" />
@@ -26,7 +26,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-bg/10 via-bg/70 to-bg"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto w-full py-20 relative z-10">
+      <div className="max-w-7xl mx-auto w-full px-6 py-24 md:py-20 relative z-10">
         <div className="grid lg:grid-cols-[1fr_0.9fr] gap-12 lg:gap-20 items-center">
           {/* Left Column - Content */}
           <div>
